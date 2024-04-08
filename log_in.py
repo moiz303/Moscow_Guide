@@ -16,12 +16,18 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
+    """
+    Создаём сессию в базе
+    """
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """
+    Логинимся
+    """
     form = LoginForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
@@ -35,6 +41,9 @@ def login():
 
 @app.route("/")
 def index():
+    """
+    Сама, собственно, база
+    """
     db_sess = db_session.create_session()
     jobs = db_sess.query(Jobs).all()
     users = db_sess.query(User).all()
@@ -45,12 +54,18 @@ def index():
 @app.route('/logout')
 @login_required
 def logout():
+    """
+    Выходим из учётной записи
+    """
     logout_user()
     return redirect("/")
 
 
 @app.route('/register', methods=['GET', 'POST'])
 def reqister():
+    """
+    Регистрация
+    """
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
