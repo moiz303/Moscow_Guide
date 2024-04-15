@@ -1,11 +1,13 @@
-from flask import Flask, render_template, redirect
+import wikipedia
+
+from flask import Flask, render_template, redirect, url_for
 from flask_login import LoginManager, login_user, login_required, logout_user
 
 from data import db_session
 from data.login_form import LoginForm
 from data.users import User
-from data.jobs import Jobs
 from data.register import RegisterForm
+from data.make_req import Reqest
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -39,16 +41,25 @@ def login():
     return render_template('login.html', title='Авторизация', form=form)
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
     """
     Сама, собственно, база
     """
-    db_sess = db_session.create_session()
-    jobs = db_sess.query(Jobs).all()
-    users = db_sess.query(User).all()
-    names = {name.id: (name.surname, name.name) for name in users}
-    return render_template("index.html", jobs=jobs, names=names, title='Work log')
+    form = Reqest()
+    if form.validate_on_submit():
+        return redirect(url_for(".give_info", request=form.req.data))
+    return render_template("index.html", form=form)
+
+
+@app.route("/give_info/<request>", methods=['GET', 'POST'])
+def give_info(request):
+    """
+    Получаем информацию с Википедии и постим её
+    """
+    wikipedia.set_lang('ru')
+    info = wikipedia.summary(request)
+    return render_template("give_info.html", text=info)
 
 
 @app.route('/logout')
@@ -69,11 +80,11 @@ def reqister():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Register', form=form,
+            return render_template('register.html', title='Регистрация', form=form,
                                    message="Пароли не совпадают")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.email == form.email.data).first():
-            return render_template('register.html', title='Register', form=form,
+            return render_template('register.html', title='Регистрация', form=form,
                                    message="Пользователь уже существует")
         user = User(
             name=form.name.data,
@@ -91,11 +102,11 @@ def reqister():
     return render_template('register.html', title='Регистрация', form=form)
 
 
-def main():
+def log_in():
     db_session.global_init("db/Users.sqlite3")
 
     app.run()
 
 
 if __name__ == '__main__':
-    main()
+    log_in()

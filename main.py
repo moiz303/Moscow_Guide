@@ -3,7 +3,7 @@ import sys
 
 from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow
+from PyQt5.QtWidgets import QLabel, QMainWindow, QApplication
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3 import Retry
@@ -26,11 +26,9 @@ class MainWindow(QMainWindow):
         super().__init__()
         uic.loadUi('templates/main_window.ui', self)
 
-        self.map_zoom = 5
-        self.map_ll = [50.977751, 55.757718]
+        self.map_zoom = 15
+        self.map_ll = [37.977751, 55.757718]
         self.map_l = 'map'
-        self.map_key = ''
-        self.map_point = ''
 
         self.refresh_map()
 
@@ -43,11 +41,9 @@ class MainWindow(QMainWindow):
             "l": self.map_l,
             'z': self.map_zoom,
         }
-        if self.map_point:
-            map_params['pt'] = self.map_point
         response = make_request('https://static-maps.yandex.ru/1.x/', params=map_params)
         if not response:
-            print('error: could not get map')
+            print('Ошибка: не могу получить карту')
             return
         with open('tmp.png', mode='wb') as tmp:
             tmp.write(response.content)
@@ -61,11 +57,10 @@ class MainWindow(QMainWindow):
         """
         Поиск по карте
         """
-        x, y = geo_locate(self.g_search.text())
+        x, y = geo_locate('Московский кремль')
         if x == -1 or y == -1:
             return
         self.map_ll = [x, y]
-        self.map_point = f'{x},{y},comma'
         self.refresh_map()
 
 
@@ -80,21 +75,13 @@ def geo_locate(name):
     }
     response = make_request('http://geocode-maps.yandex.ru/1.x/', params=params)
     if not response:
-        print(f'error: could not get geo_locate object {name}')
+        print(f'Ошибка: не могу получить место с названием {name}')
         return -1, -1
     geo_objects = response.json()['response']["GeoObjectCollection"]["featureMember"]
     if not geo_objects:
-        print('error: could not get geo_objects')
+        print('Ошибка: не могу получить место')
         return -1, -1
     return list(map(float, geo_objects[0]["GeoObject"]["Point"]["pos"].split()))
-
-
-def clip(v, _min, _max):
-    if v < _min:
-        return _min
-    if v > _max:
-        return _max
-    return v
 
 
 def make_request(*args, **kwargs):
@@ -109,7 +96,12 @@ def make_request(*args, **kwargs):
     return session.get(*args, **kwargs)
 
 
-app = QApplication(sys.argv)
-main_window = MainWindow()
-main_window.show()
-sys.exit(app.exec())
+def main():
+    app = QApplication(sys.argv)
+    main_window = MainWindow()
+    main_window.show()
+    sys.exit(app.exec())
+
+
+if __name__ == '__main__':
+    main()

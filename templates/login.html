@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Authorization</h1>
+    <h1>Aвторизация</h1>
     <form action="" method="post">
-        {{ form.hidden_tag() }}
         <p>
             {{ form.email.label }}<br>
             {{ form.email(class="form-control", type="email") }}<br>
