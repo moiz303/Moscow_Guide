@@ -1,4 +1,7 @@
+import pyttsx3
 import wikipedia
+
+from main import search
 
 from flask import Flask, render_template, redirect, url_for
 from flask_login import LoginManager, login_user, login_required, logout_user
@@ -8,12 +11,22 @@ from data.login_form import LoginForm
 from data.users import User
 from data.register import RegisterForm
 from data.make_req import Reqest
+from data.text_to_speech import TTS
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+
+def TextSpeech(text_speech: str):
+    """
+    Озвучиваем текст
+    """
+    tts = pyttsx3.init()
+    tts.say(text_speech)
+    tts.runAndWait()
 
 
 @login_manager.user_loader
@@ -58,8 +71,20 @@ def give_info(request):
     Получаем информацию с Википедии и постим её
     """
     wikipedia.set_lang('ru')
+    search(request)
     info = wikipedia.summary(request)
-    return render_template("give_info.html", text=info)
+    form = TTS()
+    if form.validate_on_submit():
+        TextSpeech(info)
+    return render_template("give_info.html", text=info, form=form)
+
+
+@app.route("/find_cat_8")
+def cat_8():
+    """
+    Пасхалочка на найди кота 8
+    """
+    return render_template("cat8.html")
 
 
 @app.route('/logout')
