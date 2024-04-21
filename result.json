@@ -1,1 +1,270 @@
-{"response": {"GeoObjectCollection": {"metaDataProperty": {"GeocoderResponseMetaData": {"Point": {"pos": "37.611656 55.81973"}, "request": "37.61165562063414 55.819730050000004", "results": "10", "found": "8"}}, "featureMember": [{"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "exact", "text": "Россия, Москва, улица Академика Королёва, 15к1", "kind": "house", "Address": {"country_code": "RU", "formatted": "Россия, Москва, улица Академика Королёва, 15к1", "postal_code": "127427", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}, {"kind": "locality", "name": "Москва"}, {"kind": "street", "name": "улица Академика Королёва"}, {"kind": "house", "name": "15к1"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва, улица Академика Королёва, 15к1", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва", "Locality": {"LocalityName": "Москва", "Thoroughfare": {"ThoroughfareName": "улица Академика Королёва", "Premise": {"PremiseNumber": "15к1", "PostalCode": {"PostalCodeNumber": "127427"}}}}}}}}}, "name": "улица Академика Королёва, 15к1", "description": "Москва, Россия", "boundedBy": {"Envelope": {"lowerCorner": "37.607592 55.817411", "upperCorner": "37.615803 55.822033"}}, "uri": "ymapsbm1://geo?data=IgoNVXIWQhVoR19C", "Point": {"pos": "37.611697 55.819722"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "street", "text": "Россия, Москва, улица Академика Королёва", "kind": "street", "Address": {"country_code": "RU", "formatted": "Россия, Москва, улица Академика Королёва", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}, {"kind": "locality", "name": "Москва"}, {"kind": "street", "name": "улица Академика Королёва"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва, улица Академика Королёва", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва", "Locality": {"LocalityName": "Москва", "Thoroughfare": {"ThoroughfareName": "улица Академика Королёва"}}}}}}}, "name": "улица Академика Королёва", "description": "Москва, Россия", "boundedBy": {"Envelope": {"lowerCorner": "37.578999 55.821305", "upperCorner": "37.635934 55.834153"}}, "uri": "ymapsbm1://geo?data=Cgc4MDU5NjU3EkrQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0YPQu9C40YbQsCDQkNC60LDQtNC10LzQuNC60LAg0JrQvtGA0L7Qu9GR0LLQsCIKDQRuFkIVZUlfQg,,", "Point": {"pos": "37.607439 55.821674"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия, Москва, Северо-Восточный административный округ, Останкинский район", "kind": "district", "Address": {"country_code": "RU", "formatted": "Россия, Москва, Северо-Восточный административный округ, Останкинский район", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}, {"kind": "locality", "name": "Москва"}, {"kind": "district", "name": "Северо-Восточный административный округ"}, {"kind": "district", "name": "Останкинский район"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва, Северо-Восточный административный округ, Останкинский район", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва", "Locality": {"LocalityName": "Москва", "DependentLocality": {"DependentLocalityName": "Северо-Восточный административный округ", "DependentLocality": {"DependentLocalityName": "Останкинский район"}}}}}}}}, "name": "Останкинский район", "description": "Северо-Восточный административный округ, Москва, Россия", "boundedBy": {"Envelope": {"lowerCorner": "37.580184 55.797113", "upperCorner": "37.64975 55.859256"}}, "uri": "ymapsbm1://geo?data=Cgg1MzIxMTc0OBKMAdCg0L7RgdGB0LjRjywg0JzQvtGB0LrQstCwLCDQodC10LLQtdGA0L4t0JLQvtGB0YLQvtGH0L3Ri9C5INCw0LTQvNC40L3QuNGB0YLRgNCw0YLQuNCy0L3Ri9C5INC-0LrRgNGD0LMsINCe0YHRgtCw0L3QutC40L3RgdC60LjQuSDRgNCw0LnQvtC9IgoNoXwWQhW9Rl9C", "Point": {"pos": "37.621714 55.81908"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия, Москва, Северо-Восточный административный округ", "kind": "district", "Address": {"country_code": "RU", "formatted": "Россия, Москва, Северо-Восточный административный округ", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}, {"kind": "locality", "name": "Москва"}, {"kind": "district", "name": "Северо-Восточный административный округ"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва, Северо-Восточный административный округ", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва", "Locality": {"LocalityName": "Москва", "DependentLocality": {"DependentLocalityName": "Северо-Восточный административный округ"}}}}}}}, "name": "Северо-Восточный административный округ", "description": "Москва, Россия", "boundedBy": {"Envelope": {"lowerCorner": "37.519279 55.782537", "upperCorner": "37.733958 55.957565"}}, "uri": "ymapsbm1://geo?data=Cgg1MzE4MzYzORJn0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCh0LXQstC10YDQvi3QktC-0YHRgtC-0YfQvdGL0Lkg0LDQtNC80LjQvdC40YHRgtGA0LDRgtC40LLQvdGL0Lkg0L7QutGA0YPQsyIKDcCHFkIVZWtfQg,,", "Point": {"pos": "37.632565 55.854875"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия, Москва", "kind": "locality", "Address": {"country_code": "RU", "formatted": "Россия, Москва", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}, {"kind": "locality", "name": "Москва"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва", "Locality": {"LocalityName": "Москва"}}}}}}, "name": "Москва", "description": "Россия", "boundedBy": {"Envelope": {"lowerCorner": "37.32606 55.49133", "upperCorner": "37.967799 55.957565"}}, "uri": "ymapsbm1://geo?data=Cgg1MzE2NjM5MxIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg14eBZCFfUFX0I,", "Point": {"pos": "37.617644 55.755819"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия, Москва", "kind": "province", "Address": {"country_code": "RU", "formatted": "Россия, Москва", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}, {"kind": "province", "name": "Москва"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Москва", "CountryNameCode": "RU", "CountryName": "Россия", "AdministrativeArea": {"AdministrativeAreaName": "Москва"}}}}}, "name": "Москва", "description": "Россия", "boundedBy": {"Envelope": {"lowerCorner": "36.803079 55.142226", "upperCorner": "37.967799 56.021286"}}, "uri": "ymapsbm1://geo?data=Cgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I,", "Point": {"pos": "37.617698 55.755864"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия, Центральный федеральный округ", "kind": "province", "Address": {"country_code": "RU", "formatted": "Россия, Центральный федеральный округ", "Components": [{"kind": "country", "name": "Россия"}, {"kind": "province", "name": "Центральный федеральный округ"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия, Центральный федеральный округ", "CountryNameCode": "RU", "CountryName": "Россия"}}}}, "name": "Центральный федеральный округ", "description": "Россия", "boundedBy": {"Envelope": {"lowerCorner": "30.748407 49.556986", "upperCorner": "47.6426 59.623738"}}, "uri": "ymapsbm1://geo?data=Cgg1MzAwMDAxMxJG0KDQvtGB0YHQuNGPLCDQptC10L3RgtGA0LDQu9GM0L3Ri9C5INGE0LXQtNC10YDQsNC70YzQvdGL0Lkg0L7QutGA0YPQsyIKDUdCGEIVuH5bQg,,", "Point": {"pos": "38.064727 54.87375"}}}, {"GeoObject": {"metaDataProperty": {"GeocoderMetaData": {"precision": "other", "text": "Россия", "kind": "country", "Address": {"country_code": "RU", "formatted": "Россия", "Components": [{"kind": "country", "name": "Россия"}]}, "AddressDetails": {"Country": {"AddressLine": "Россия", "CountryNameCode": "RU", "CountryName": "Россия"}}}}, "name": "Россия", "boundedBy": {"Envelope": {"lowerCorner": "19.484764 41.185996", "upperCorner": "191.128012 81.886117"}}, "uri": "ymapsbm1://geo?data=Cgg1MzAwMDAwMRIM0KDQvtGB0YHQuNGPIgoNxQLHQhVsy3ZC", "Point": {"pos": "99.505405 61.698657"}}}]}}}
+{
+  "response": {
+    "GeoObjectCollection": {
+      "metaDataProperty": {
+        "GeocoderResponseMetaData": {
+          "Point": {
+            "pos": "142.13507 47.589209"
+          },
+          "request": "142.1350701 47.5892088",
+          "results": "10",
+          "found": "5"
+        }
+      },
+      "featureMember": [
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия, Сахалинская область, Томаринский городской округ",
+                "kind": "area",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Сахалинская область, Томаринский городской округ",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Дальневосточный федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Сахалинская область"
+                    },
+                    {
+                      "kind": "area",
+                      "name": "Томаринский городской округ"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Сахалинская область, Томаринский городской округ",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Сахалинская область",
+                      "SubAdministrativeArea": {
+                        "SubAdministrativeAreaName": "Томаринский городской округ"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Томаринский городской округ",
+            "description": "Сахалинская область, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "141.715955 47.49714",
+                "upperCorner": "142.495163 48.785699"
+              }
+            },
+            "uri": "ymapsbm1://geo?data=IgoNlCIOQxVaWz5C",
+            "Point": {
+              "pos": "142.287832 48.153606"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия, Сахалинская область, остров Сахалин",
+                "kind": "other",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Сахалинская область, остров Сахалин",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Дальневосточный федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Сахалинская область"
+                    },
+                    {
+                      "kind": "other",
+                      "name": "остров Сахалин"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Сахалинская область, остров Сахалин",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Сахалинская область",
+                      "Locality": {
+                        "Premise": {
+                          "PremiseName": "остров Сахалин"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "name": "остров Сахалин",
+            "description": "Сахалинская область, Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "141.622486 45.892863",
+                "upperCorner": "144.747518 54.424739"
+              }
+            },
+            "uri": "ymapsbm1://geo?data=CgoyMDQ1NzI5OTQwElDQoNC-0YHRgdC40Y8sINCh0LDRhdCw0LvQuNC90YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINC-0YHRgtGA0L7QsiDQodCw0YXQsNC70LjQvSIKDeC0DkMVWlFJQg,,",
+            "Point": {
+              "pos": "142.706546 50.329448"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия, Сахалинская область",
+                "kind": "province",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Сахалинская область",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Дальневосточный федеральный округ"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Сахалинская область"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Сахалинская область",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия",
+                    "AdministrativeArea": {
+                      "AdministrativeAreaName": "Сахалинская область"
+                    }
+                  }
+                }
+              }
+            },
+            "name": "Сахалинская область",
+            "description": "Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "141.002864 43.183283",
+                "upperCorner": "156.718009 54.544953"
+              }
+            },
+            "uri": "ymapsbm1://geo?data=Cgg1MzAwMDA3NhIz0KDQvtGB0YHQuNGPLCDQodCw0YXQsNC70LjQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMIgoNNcAOQxWNmkhC",
+            "Point": {
+              "pos": "142.750806 50.150926"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия, Дальневосточный федеральный округ",
+                "kind": "province",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия, Дальневосточный федеральный округ",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    },
+                    {
+                      "kind": "province",
+                      "name": "Дальневосточный федеральный округ"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия, Дальневосточный федеральный округ",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия"
+                  }
+                }
+              }
+            },
+            "name": "Дальневосточный федеральный округ",
+            "description": "Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "98.629682 42.139978",
+                "upperCorner": "191.128012 77.164575"
+              }
+            },
+            "uri": "ymapsbm1://geo?data=Cgg1MzAwMDAxMRJO0KDQvtGB0YHQuNGPLCDQlNCw0LvRjNC90LXQstC-0YHRgtC-0YfQvdGL0Lkg0YTQtdC00LXRgNCw0LvRjNC90YvQuSDQvtC60YDRg9CzIgoNhEP4QhWfhH5C",
+            "Point": {
+              "pos": "124.131865 63.629512"
+            }
+          }
+        },
+        {
+          "GeoObject": {
+            "metaDataProperty": {
+              "GeocoderMetaData": {
+                "precision": "other",
+                "text": "Россия",
+                "kind": "country",
+                "Address": {
+                  "country_code": "RU",
+                  "formatted": "Россия",
+                  "Components": [
+                    {
+                      "kind": "country",
+                      "name": "Россия"
+                    }
+                  ]
+                },
+                "AddressDetails": {
+                  "Country": {
+                    "AddressLine": "Россия",
+                    "CountryNameCode": "RU",
+                    "CountryName": "Россия"
+                  }
+                }
+              }
+            },
+            "name": "Россия",
+            "boundedBy": {
+              "Envelope": {
+                "lowerCorner": "19.484764 41.185996",
+                "upperCorner": "191.128012 81.886117"
+              }
+            },
+            "uri": "ymapsbm1://geo?data=Cgg1MzAwMDAwMRIM0KDQvtGB0YHQuNGPIgoNxQLHQhVsy3ZC",
+            "Point": {
+              "pos": "99.505405 61.698657"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
