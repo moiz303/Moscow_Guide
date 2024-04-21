@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 175590706,
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "relation",
+    "osm_id": 1453198,
+    "lat": "55.71730655",
+    "lon": "37.611595179589486",
+    "class": "man_made",
+    "type": "tower",
+    "place_rank": 30,
+    "importance": 0.3377849269397959,
+    "addresstype": "man_made",
+    "name": "Shukhov Tower",
+    "display_name": "Shukhov Tower, Shukhova Street, Donskoy District, Moscow, Central Federal District, 115162, Russia",
+    "boundingbox": [
+      "55.7171203",
+      "55.7175234",
+      "37.6112364",
+      "37.6119508"
+    ]
+  }
+]

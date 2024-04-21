@@ -1,3 +1,5 @@
+import os.path
+
 import pyttsx3
 import wikipedia
 
@@ -25,6 +27,7 @@ def TextSpeech(text_speech: str):
     Озвучиваем текст
     """
     tts = pyttsx3.init()
+    tts.setProperty('voice', 'ru')
     tts.say(text_speech)
     tts.runAndWait()
 
@@ -68,15 +71,18 @@ def index():
 @app.route("/give_info/<request>", methods=['GET', 'POST'])
 def give_info(request):
     """
-    Получаем информацию с Википедии и постим её
+    Получаем информацию с Википедии и постим её с картой
     """
     wikipedia.set_lang('ru')
-    search(request)
-    info = wikipedia.summary(request)
     form = TTS()
-    if form.validate_on_submit():
-        TextSpeech(info)
-    return render_template("give_info.html", text=info, form=form)
+    if request != 'tmp.jpg':
+        search(request)
+        info = wikipedia.summary(request)
+        if form.is_submitted():
+            print(info)
+            TextSpeech(info)
+        return render_template("give_info.html", text=info, form=form)
+    return render_template("give_info.html", text='', form=form)
 
 
 @app.route("/find_cat_8")
