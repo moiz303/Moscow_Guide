@@ -1,5 +1,3 @@
-import os.path
-
 import pyttsx3
 import wikipedia
 
@@ -75,14 +73,12 @@ def give_info(request):
     """
     wikipedia.set_lang('ru')
     form = TTS()
-    if request != 'tmp.jpg':
-        search(request)
-        info = wikipedia.summary(request)
-        if form.is_submitted():
-            print(info)
-            TextSpeech(info)
-        return render_template("give_info.html", text=info, form=form)
-    return render_template("give_info.html", text='', form=form)
+    search(request)
+    info = wikipedia.summary(request)
+    if form.is_submitted():
+        print(info)
+        TextSpeech(info)
+    return render_template("give_info.html", text=info, form=form)
 
 
 @app.route("/find_cat_8")

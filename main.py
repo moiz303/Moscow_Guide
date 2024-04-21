@@ -1,5 +1,6 @@
 import json
-
+import shutil
+import os
 import osmnx
 import requests
 from requests.adapters import HTTPAdapter
@@ -32,6 +33,7 @@ def search(name):
         return
     map_ll = [x, y]
     refresh_map(map_ll)
+    shutil.rmtree(os.path.abspath('cache'))
 
 
 def geo_locate(name):
