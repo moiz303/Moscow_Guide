@@ -61,9 +61,12 @@ def index():
     Сама, собственно, база
     """
     form = Reqest()
+    mess = ''
     if form.validate_on_submit():
-        return redirect(url_for(".give_info", request=form.req.data))
-    return render_template("index.html", form=form)
+        mess = search(form.req.data)
+        if mess == '':
+            return redirect(url_for(".give_info", request=form.req.data))
+    return render_template("index.html", form=form, message=mess)
 
 
 @app.route("/give_info/<request>", methods=['GET', 'POST'])
@@ -73,7 +76,6 @@ def give_info(request):
     """
     wikipedia.set_lang('ru')
     form = TTS()
-    search(request)
     info = wikipedia.summary(request)
     src = f"{url_for('static', filename='img/tmp.jpg')}"
     if form.is_submitted():

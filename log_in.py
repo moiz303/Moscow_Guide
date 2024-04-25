@@ -24,16 +24,18 @@ def refresh_map(map_ll):
         tmp.write(response.content)
 
 
-def search(name):
+def search(name) -> str:
     """
     Поиск по карте
     """
-    x, y = geo_locate(name)
-    if x == -1 or y == -1:
-        return
+    cords = geo_locate(name)
+    if type(cords) == type(''):
+        return cords
+    x, y = cords
     map_ll = [x, y]
     refresh_map(map_ll)
     shutil.rmtree(os.path.abspath('cache'))
+    return ''
 
 
 def geo_locate(name):
@@ -50,8 +52,7 @@ def geo_locate(name):
         }
         response = make_request('http://geocode-maps.yandex.ru/1.x/', params=params)
     except osmnx._errors.InsufficientResponseError:
-        print(f'Ошибка: не могу получить место с названием "{name}"')
-        return -1, -1
+        return f'Ошибка: не могу получить место с названием "{name}"'
 
     with open('result.json', 'w', encoding='utf8') as file:
         text = response.json()
@@ -59,8 +60,7 @@ def geo_locate(name):
 
     geo_objects = response.json()['response']["GeoObjectCollection"]["featureMember"]
     if not geo_objects:
-        print('Ошибка: не могу получить место')
-        return -1, -1
+        return 'Ошибка: не могу получить место'
 
     correct_geo_objects = []
 
@@ -73,8 +73,7 @@ def geo_locate(name):
             pass
 
     if not correct_geo_objects:
-        print('Ошибка: место находится не в Москве')
-        return -1, -1
+        return 'Ошибка: место находится не в Москве'
 
     return [coords[1], coords[0]]
 
@@ -92,4 +91,4 @@ def make_request(*args, **kwargs):
 
 
 if __name__ == '__main__':
-    search('Нескучный сад')
+    search('Пизанская башня')

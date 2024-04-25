@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<meta charset="UTF-8">
-
-<h2 align="center">Введите достопримечательность</h2>
-<p><img class="imageLeft" src={{src}} height='300' alt="Карта не загрузилась("/></p>
-<p><strong>{{text}}</strong></p>
-<form action="" method="post">
+    <meta charset="UTF-8">
+    <form action="" method="post">
         {{ form.hidden_tag() }}
-    <p>{{form.submit(type="submit", class="btn btn-info")}}</p>
-</form>
-
+        <h2 align="center">Введите достопримечательность</h2>
+        <p><img class="imageLeft" src={{src}} height='300' alt="Карта не загрузилась("/></p>
+        <p><strong>{{text}}</strong></p>
+        <p>{{form.submit(type="submit", class="btn btn-info")}}</p>
+    </form>
 {% endblock %}
